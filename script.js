@@ -3,10 +3,11 @@ console.log("script started");
 // add a task
 function addTask() {
 
+
 // get task text
 let textbox = document.getElementById("task-input");
 let taskText = textbox.value;
-taskbox.value = "";
+textbox.value = "";
 
 // get tasklist
 let taskList = document.getElementById("task-list")
