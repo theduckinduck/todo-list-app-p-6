@@ -12,11 +12,11 @@ taskbox.value = "";
 let taskList = document.getElementById("task-list")
 
 // generate id number
-let idNum
+let idNum = taskList.childElementCount;
 
 // create task div
 let taskDiv = document.createElement("div");
-taskDiv.id = "task" + idNum
+taskDiv.id = "task" + idNum;
 taskDiv.classList.add("task-item");
 if (idNum % 2 == 1) {
     taskDiv.style.backgroundColor = "darkturquoise";
@@ -25,11 +25,11 @@ if (idNum % 2 == 1) {
 // create checkbox
 let checkbox = document.createElement("input");
 checkbox.type = "checkbox";
-checkbox.id = "checkbox" + idNum
+checkbox.id = "checkbox" + idNum;
 
 // create label
 let label = document.createElement("label");
-label.id = "label" + idNum
+label.id = "label" + idNum;
 
 // set label text
 label.innerText = taskText;
@@ -38,7 +38,7 @@ label.innerText = taskText;
 taskDiv.appendChild(checkbox);
 
 // add the label to the task div
-taskDiv.append(label);
+taskDiv.appendChild(label);
 
 //add the dask div to the list
 taskList.appendChild(taskDiv);
